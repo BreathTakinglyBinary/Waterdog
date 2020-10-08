@@ -1892,12 +1892,6 @@ index 007d3daf..807f512e 100644
 +                    //TODO: loginProfile?
 +                    handle(new LoginRequest(peHandshake.getUsername()));
 +
-+                    peHandshake.getClientInfo().addProperty("WaterDog_RemoteIP", getAddress().getHostString()); //old format, deprecated.
-+                    peHandshake.getClientInfo().addProperty("Waterdog_RemoteIP", getAddress().getHostString());
-+                    if (peHandshake.getXuid() != null) {
-+                        peHandshake.getClientInfo().addProperty("Waterdog_XUID", peHandshake.getXuid().toString());
-+                    }
-+
 +                    if (isOnlineMode() && !peHandshake.isAuthorized()) {
 +                        disconnect("disconnectionScreen.notAuthenticated");
 +                        break;

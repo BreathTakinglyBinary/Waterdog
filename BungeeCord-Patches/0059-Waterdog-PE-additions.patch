@@ -2612,8 +2612,6 @@ index 00000000..677f4205
 +        Preconditions.checkArgument(serverAddr != null, "ServerAddress is missing");
 +        final HostAndPort hostAndPort = HostAndPort.fromString(serverAddr);
 +
-+        clientInfo.addProperty("Waterdog_OriginalUUID", getString(identityData, "identity"));
-+
 +        handshake.setClientInfo(clientInfo);
 +        handshake.setUsername(getString(identityData, "displayName"));
 +        if (BungeeCord.getInstance().config.isReplaceUsernameSpaces()) {
